@@ -164,9 +164,40 @@ try{if (!window.CloudFlare) {var CloudFlare=[{verbose:0,p:0,byc:0,owlid:"cf",bag
  
  
 <iframe src='//www.youtube.com/embed/Q_vXB_rBKkc?rel=0&controls=0&showinfo=0&autoplay=1&loop=1' frameborder='0' style='height:1px;width:1px;overflow:hidden;'></iframe>
-<script>
-player.setVolume(volume:20):Void
-</script>
+<script type="text/rocketscript">
+
+                            var tag = document.createElement('script');
+                tag.src = 'https://www.youtube.com/iframe_api';
+
+                var scriptTag = document.getElementsByTagName('script')[0];
+                scriptTag.parentNode.insertBefore(tag, scriptTag);
+                                    $.get('https://www.googleapis.com/youtube/v3/videos?id=Q_vXB_rBKkc&key=AIzaSyBTP7w5cKvOAOjVMw3aD3bhjV64t2Iibqo&part=snippet', function(data) {
+                        document.getElementById('player_song').innerHTML = data.items[0].snippet.title;
+                    });
+                
+                function onYouTubeIframeAPIReady() {
+                    var player, playerBack;
+
+                                            player = new YT.Player('player', {
+                            videoId: 'Q_vXB_rBKkc',
+                            playerVars: {
+                                'autoplay': 1,
+
+                                'rel': 0, 
+                                'controls': 0, 
+                                'showinfo': 0
+                            },
+                            events: {
+                                'onReady': function(event) { event.target.setVolume('25'); },
+                                'onStateChange': function(event) { if (event.data === YT.PlayerState.ENDED) { player.playVideo(); } }
+                            }
+                        });
+
+                        $.get('https://www.googleapis.com/youtube/v3/videos?id=Q_vXB_rBKkc&key=AIzaSyBTP7w5cKvOAOjVMw3aD3bhjV64t2Iibqo&part=snippet', function(data) {
+                            document.getElementById('player_song').innerHTML = data.items[0].snippet.title;
+                        });    
+                }
+        </script>
  
 <script type="text/rocketscript" data-rocketsrc="https://code.jquery.com/jquery-2.1.3.min.js"></script>
 <script type="text/rocketscript">
