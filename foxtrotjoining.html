@@ -124,7 +124,7 @@ try{if (!window.CloudFlare) {var CloudFlare=[{verbose:0,p:0,byc:0,owlid:"cf",bag
 <tbody>
 <tr class="table-rules">
 <td><b>01.</b></td>
-<td><span id="rule_01">No prop spam/climb/kill/etc. Doing any of this will get you warned/kicked/banned.</span></td>
+<td><span id="rule_01">No prop spam/climb/kill/etc.</span></td>
 </tr>
 <tr class="table-rules">
 <td><b>02.</b></td>
@@ -140,19 +140,19 @@ try{if (!window.CloudFlare) {var CloudFlare=[{verbose:0,p:0,byc:0,owlid:"cf",bag
 </tr>
 <tr class="table-rules">
 <td><b>05.</b></td>
-<td><span id="rule_05">Do not RDM. (Random Deathmatch)</span></td>
+<td><span id="rule_05">Do not RDM.</span></td>
 </tr>
 <tr class="table-rules">
 <td><b>06.</b></td>
-<td><span id="rule_06">Do not RDA. (Random Arrest)</span></td>
+<td><span id="rule_06">Do not RDA.</span></td>
 </tr>
 <tr class="table-rules">
 <td><b>07.</b></td>
-<td><span id="rule_07">Staff has final say. (Owner, Admins, and Mods)</span></td>
+<td><span id="rule_07">Staff has final say.</span></td>
 </tr>
 <tr class="table-rules">
 <td><b>08.</b></td>
-<td><span id="rule_08">DDoS threats (Distributed Denial of Service) will result in a week ban.</span></td>
+<td><span id="rule_08">DDoS threats will result in a week ban.</span></td>
 </tr>
 </tbody>
 </table>
@@ -164,40 +164,9 @@ try{if (!window.CloudFlare) {var CloudFlare=[{verbose:0,p:0,byc:0,owlid:"cf",bag
  
  
 <iframe src='//www.youtube.com/embed/Q_vXB_rBKkc?rel=0&controls=0&showinfo=0&autoplay=1&loop=1' frameborder='0' style='height:1px;width:1px;overflow:hidden;'></iframe>
-<script type="text/rocketscript">
+<script>
 
-                            var tag = document.createElement('script');
-                tag.src = 'https://www.youtube.com/iframe_api';
-
-                var scriptTag = document.getElementsByTagName('script')[0];
-                scriptTag.parentNode.insertBefore(tag, scriptTag);
-                                    $.get('https://www.googleapis.com/youtube/v3/videos?id=Q_vXB_rBKkc&key=AIzaSyBTP7w5cKvOAOjVMw3aD3bhjV64t2Iibqo&part=snippet', function(data) {
-                        document.getElementById('player_song').innerHTML = data.items[0].snippet.title;
-                    });
-                
-                function onYouTubeIframeAPIReady() {
-                    var player, playerBack;
-
-                                            player = new YT.Player('player', {
-                            videoId: 'Q_vXB_rBKkc',
-                            playerVars: {
-                                'autoplay': 1,
-
-                                'rel': 0, 
-                                'controls': 0, 
-                                'showinfo': 0
-                            },
-                            events: {
-                                'onReady': function(event) { event.target.setVolume('25'); },
-                                'onStateChange': function(event) { if (event.data === YT.PlayerState.ENDED) { player.playVideo(); } }
-                            }
-                        });
-
-                        $.get('https://www.googleapis.com/youtube/v3/videos?id=Q_vXB_rBKkc&key=AIzaSyBTP7w5cKvOAOjVMw3aD3bhjV64t2Iibqo&part=snippet', function(data) {
-                            document.getElementById('player_song').innerHTML = data.items[0].snippet.title;
-                        });    
-                }
-        </script>
+</script>
  
 <script type="text/rocketscript" data-rocketsrc="https://code.jquery.com/jquery-2.1.3.min.js"></script>
 <script type="text/rocketscript">
